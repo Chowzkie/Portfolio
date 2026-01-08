@@ -1,0 +1,240 @@
+/* Custom Palette Variables */
+:root {
+    --primary-green: #4CA771;
+    --bg-light-mint: #EAF9E7;
+    --accent-sage: #C0E6BA;
+}
+
+body { 
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 400; /* Regular weight */
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Make headings extra bold for a modern look */
+h1, h2, h3, .navbar-brand {
+    font-weight: 700 !important;
+}
+
+/* Lead text and subheadings */
+.lead, .card-title {
+    font-weight: 600;
+}
+
+/* Navigation Styling */
+.navbar-custom {
+    background-color: var(--primary-green) !important;
+}
+
+/* Making Nav links whiter and bolder */
+.navbar-custom .nav-link {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px;
+}
+/* 1. Link Hover Effect */
+.navbar-custom .nav-link {
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.navbar-custom .nav-link:hover {
+    color: var(--accent-sage) !important; /* Changes to your light green on hover */
+}
+
+/* 2. CV Button Hover Effect */
+.navbar-nav .btn-light {
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .btn-light:hover {
+    background-color: var(--bg-light-mint) !important;
+    transform: translateY(-2px); /* Subtle lift effect */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* 3. Fixing the vertical alignment helper */
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Custom Outline Button for CV */
+.btn-outline-success {
+    border-color: var(--primary-green);
+    color: var(--primary-green);
+    font-weight: 600;
+}
+
+.btn-outline-success:hover {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+    color: white;
+}
+
+/* Hero Section */
+section { 
+    padding: 80px 0; 
+}
+
+.hero-section { 
+    background-color: var(--bg-light-mint); 
+    min-height: 75vh; 
+    display: flex; 
+    align-items: center; 
+}
+
+.text-custom-green { 
+    color: var(--primary-green) !important; 
+}
+
+/* Buttons */
+.btn-custom {
+    background-color: var(--primary-green);
+    color: white;
+    font-weight: 600;
+    border: none;
+}
+
+.btn-custom:hover {
+    background-color: #3d8d5f;
+    color: white;
+}
+
+/* Projects Section */
+.card {
+    border: 2px solid var(--accent-sage);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-green);
+}
+
+.card-img-top { 
+    height: 200px; 
+    object-fit: cover; 
+}
+
+/* Project Carousel Styling */
+#projectCarousel .carousel-inner {
+    padding: 15px; /* Adds space for the card shadow */
+}
+
+/* Style the indicator dots */
+.carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+/* Ensure images maintain aspect ratio */
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--accent-sage);
+}
+
+/* Tech Stack Carousel Styling */
+.tech-icon-box {
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.tech-icon-box:hover {
+    transform: scale(1.1);
+}
+
+.tech-icon-box i {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Adjust Carousel Arrows color to match your theme */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--primary-green) !important;
+    padding: 20px;
+    background-size: 50%;
+}
+
+/* Ensure the carousel doesn't get too wide on large screens */
+#techCarousel {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Timeline Styling */
+.timeline-item {
+    position: relative;
+    border-color: var(--primary-green) !important;
+}
+
+.timeline-dot {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: var(--primary-green);
+    border-radius: 50%;
+    left: -10px; /* Aligns exactly with the border-start */
+    top: 5px;
+    border: 3px solid #fff;
+}
+
+.timeline-item h4 {
+    font-size: 1.25rem;
+    margin-top: 5px;
+}
+
+/* Badge styling to match your theme */
+.badge.btn-custom {
+    background-color: var(--primary-green);
+    font-size: 0.8rem;
+    padding: 8px 12px;
+}
+
+/* Contact Section */
+.contact-wrapper {
+    background: #ffffff;
+    border: 1px solid var(--accent-sage);
+}
+
+.contact-info-panel {
+    background-color: var(--primary-green) !important;
+}
+
+.icon-box {
+    background: rgba(255, 255, 255, 0.2);
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.custom-input {
+    background-color: var(--bg-light-mint);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.custom-input:focus {
+    background-color: #ffffff;
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 0.25rem rgba(76, 167, 113, 0.1);
+}
+
+.form-label {
+    color: var(--primary-green);
+    letter-spacing: 1px;
+}
+
+.social-links a:hover {
+    color: var(--accent-sage) !important;
+    transition: 0.3s;
+}
