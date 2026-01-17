@@ -55,46 +55,83 @@
     </header>
     <!-- Project Section -->
     <section id="projects" class="container py-5">
-        <h2 class="text-center mb-5 fw-bold text-custom-green">Recent Projects</h2>
+        <div class="text-center mb-5">
+            <h2 class="fw-bold text-custom-green">Featured Projects</h2>
+            <p class="text-muted">A showcase of my technical projects and academic work.</p>
+        </div>
         
-        <div id="projectCarousel" class="carousel slide" data-bs-ride="false">
-            <div class="carousel-inner">
-                <!--1st Showcase of Projects-->
-                <div class="carousel-item active">
-                    <div class="row g-4">
-                        <!-- Project 1 -->
-                        <div class="col-12 col-md-4">
-                            <div class="card h-100 shadow-sm">
-                                <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="Project 1">
-                                <div class="card-body">
-                                    <h5 class="card-title fw-bold">Project 1</h5>
-                                    <p class="card-text">This is Project 1.</p>
-                                    <a href="#" class="btn btn-outline-success btn-sm">View Details</a>
-                                </div>
-                            </div>
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 project-card shadow-sm border-0">
+                    <div class="project-img-container">
+                        <img src="/assets/Logo.png" class="card-img-top" alt="Water Quality Monitoring">
+                        <div class="project-overlay">
+                            <a href="#" class="btn btn-light btn-sm fw-bold">View Project</a>
                         </div>
-                        <!-- Project 2 -->
-                        <div class="col-12 col-md-4">
-                            <div class="card h-100 shadow-sm">
-                                <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="Project 2">
-                                <div class="card-body">
-                                    <h5 class="card-title fw-bold">Project 2</h5>
-                                    <p class="card-text">This is Project 2</p>
-                                    <a href="#" class="btn btn-outline-success btn-sm">View Demo</a>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-2">
+                            <span class="badge bg-success-subtle text-success border border-success-subtle">MERN</span>
+                            <span class="badge bg-primary-subtle text-primary border border-primary-subtle">IoT</span>
                         </div>
-                        <!-- Project 3 -->
-                        <div class="col-12 col-md-4">
-                            <div class="card h-100 shadow-sm">
-                                <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="Project 3">
-                                <div class="card-body">
-                                    <h5 class="card-title fw-bold">Project 3</h5>
-                                    <p class="card-text">This is Project 3.</p>
-                                    <a href="#" class="btn btn-outline-success btn-sm">View Case Study</a>
-                                </div>
-                            </div>
+                        <h5 class="card-title fw-bold">IoT Water Quality Monitor</h5>
+                        <p class="card-text small text-muted">Automated system for monitoring water parameters such as pH, Temperature, Turbidy, and Total Dissolved Solids with valve shut-off functionality for our Capstone project</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 pb-3">
+                        <a href="https://github.com/Chowzkie/WaterGuard" target="_blank" class="text-decoration-none text-custom-green fw-bold small">
+                            <i class="bi bi-github me-1"></i> GitHub Repository
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 project-card shadow-sm border-0">
+                    <div class="project-img-container">
+                        <img src="/assets/favicon.png" class="card-img-top" alt="Portfolio">
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-2">
+                            <span class="badge bg-info-subtle text-info border border-info-subtle">HTML5</span>
+                            <span class="badge bg-success-subtle text-success border border-success-subtle">CSS3</span>
+                            <span class="badge bg-primary-subtle text-primary border border-primary-subtle">Bootstrap</span>
                         </div>
+                        <h5 class="card-title fw-bold">Personal Portfolio</h5>
+                        <p class="card-text small text-muted">
+                            A responsive professional showcase built with <b>Bootstrap 5</b> and <b>Custom CSS</b>, 
+                            featuring a mobile-first design and integrated <b>Formspree API</b> for seamless 
+                            client communication.
+                        </p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 pb-3">
+                        <a href="#" class="text-decoration-none text-custom-green fw-bold small">
+                            <i class="bi bi-link-45deg me-1"></i> Visit Site
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 project-card shadow-sm border-0">
+                    <div class="project-img-container">
+                        <img src="/assets/TG.png" class="card-img-top" alt="TechGeeks">
+                        <div class="project-overlay">
+                            <a href="#" class="btn btn-light btn-sm fw-bold">View Case Study</a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-2">
+                            <span class="badge bg-info-subtle text-info border border-info-subtle">HTML5</span>
+                            <span class="badge bg-success-subtle text-success border border-success-subtle">CSS3</span>
+                            <span class="badge bg-primary-subtle text-primary border border-primary-subtle">Javascript</span>
+                        </div>
+                        <h5 class="card-title fw-bold">TechGeeks</h5>
+                        <p class="card-text small text-muted">A case study for Web development course that showcase a different Speaker in a diferent Fields in IT. (The person displayed here is just a Mock sample)</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 pb-3">
+                        <a href="https://github.com/Chowzkie/TechGeeks" target="_blank" class="text-decoration-none text-custom-green fw-bold small">
+                            <i class="bi bi-github me-1"></i> GitHub Repository
+                        </a>
                     </div>
                 </div>
             </div>
