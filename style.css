@@ -207,6 +207,7 @@ section {
 }
 
 /* Contact Section */
+/* Contact Section Styles */
 .contact-wrapper {
     background: #ffffff;
     border: 1px solid var(--accent-sage);
@@ -237,6 +238,7 @@ section {
     background-color: #ffffff;
     border-color: var(--primary-green);
     box-shadow: 0 0 0 0.25rem rgba(76, 167, 113, 0.1);
+    outline: none;
 }
 
 .form-label {
