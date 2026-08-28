@@ -7,9 +7,8 @@ const projectsData = {
     subtitle: "A real-time IoT water quality monitoring system built for the Capstone project, delivering live sensor readings through a WebSocket-powered dashboard.",
     tags: ["ESP32", "Node.js", "MongoDB", "React", "WebSockets"],
     images: [
-      "images/waterguard/img1.jpg",
-      "images/waterguard/img2.jpg",
-      "images/waterguard/img3.jpg"
+      "../images/waterguard/img1.png",
+      "../images/waterguard/img2.png",
     ],
     overview: "WaterGuard is a full-stack IoT application that continuously monitors water safety metrics and streams the data live to a web dashboard. As Capstone Leader, I guided the team through the full development lifecycle from hardware integration to deployment and authored the end-user installation guides and technical documentation.",
     features: [
@@ -20,7 +19,7 @@ const projectsData = {
     ],
     role: "I led the capstone team end to end. Coordinating development, integrating and testing the sensor hardware, building the real-time data pipeline, and writing the documentation that made the system usable for non-technical end users.",
     links: [
-      
+      {label: "View Repository", url: "https://github.com/Chowzkie/WaterGuard", style: "btn-primary" }
     ]
   },
 
