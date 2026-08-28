@@ -1,310 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Richard Chow | Portfolio</title>
-
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RJFC</title>
+<link rel="icon" type="image/x-icon" href="asset/favicon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigations -->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#">CHOWZKI</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link px-3" href="#hero">Home</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="#edu">Education</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="#contact">Contact</a></li>
-                    <li class="nav-item ms-lg-3">
-                        <a href="/assets/CV.pdf" download class="btn btn-light fw-bold text-custom-green btn-sm px-3">Get my CV Here</a>
-                    </li>
-                </ul>
+
+<header>
+  <nav class="wrap">
+    <div class="logo"><img src="asset/favicon.svg" alt="RC logo" class="logo-mark"></div>
+    <ul class="navlinks" id="navlinks">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<main>
+  <!-- HOME -->
+  <section id="home" class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow"><span class="navdot"></span>Hi there, I'm available for work</div>
+        <h1 class="headline">Starting my Career in <span class="role-rotator mono" id="roleText">IT Support</span></h1>
+        <p class="lede">I'm an IT graduate eager to start my career. I'm skilled in troubleshooting, network fundamentals, and web development through hands-on training and personal projects. I'm looking for an entry-level opportunity where I can learn fast, contribute early, and grow with a team.</p>
+        <div class="cta-row">
+          <a href="#contact" class="btn btn-primary">Lets Connect!</a>
+          <a href="asset/CV_Chow.pdf" download class="btn btn-outline">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/></svg>
+            See my CV
+          </a>
+        </div>
+      </div>
+    <div class="hero-art">
+      <div class="art-bg" aria-hidden="true">
+        <svg class="circuit-lines" viewBox="0 0 500 560" xmlns="http://www.w3.org/2000/svg">
+          <g stroke="#0F8F5C" stroke-width="1.4" fill="none" opacity="0.55">
+            <path d="M0 90 H90 V180 H220"/>
+            <path d="M500 60 H400 V200 H300 V120"/>
+            <path d="M0 460 H100 V380 H240 V440"/>
+            <path d="M500 480 H380 V400 H280"/>
+          </g>
+          <g fill="#18B978">
+            <circle cx="90" cy="90" r="4"/>
+            <circle cx="220" cy="180" r="4"/>
+            <circle cx="400" cy="60" r="4"/>
+            <circle cx="300" cy="200" r="4"/>
+            <circle cx="100" cy="460" r="4"/>
+            <circle cx="240" cy="380" r="4"/>
+            <circle cx="380" cy="480" r="4"/>
+            <circle cx="280" cy="400" r="4"/>
+          </g>
+        </svg>
+        <div class="dot-grid"></div>
+      </div>
+      <div class="avatar-card">
+        <img src="asset/profile.png" alt="Profile" class="profile-img">
+        <div class="status-chip">
+          <span><span class="pulse"></span> STATUS: ONLINE</span>
+          <span>UPTIME 99.9%</span>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag">// about</span>
+        <h2>Fresh eyes, solid fundamentals, ready to learn.</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-copy">
+          <p>I'm an IT graduate with hands-on training on Tarlac State University - Office of Management Information Systems. While I'm early in my career, I've built a solid foundation through Home Labs, personal projects, and practical exercises. I'm looking for my first opportunity to apply what I've learned in a real team environment.</p>
+          <p>I pick things up quickly, I'm comfortable figuring out problems on my own, and I genuinely enjoy the process of troubleshooting until something works. I'm looking for an entry-level role where I can keep learning while contributing from day one.</p>
+          <ul class="stack-list">
+            <li>Windows Admin</li>
+            <li>Network Config (LAN)</li>
+            <li>Active Directory</li>
+            <li>HTML / CSS / JavaScript</li>
+            <li>Hardware Diagnostics</li>
+          </ul>
+        </div>
+        <div>
+          <div class="services">
+            <div class="service-card">
+              <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div>
+              <h3>IT Support</h3>
+              <p>Fast, patient troubleshooting for hardware, software, and everyday user issues.</p>
+            </div>
+            <div class="service-card">
+              <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v6M12 13l-5 4M12 13l5 4"/></svg></div>
+              <h3>Network &amp; Systems</h3>
+              <p>Designing, securing, and maintaining networks so things stay online.</p>
+            </div>
+            <div class="service-card">
+              <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3M13 6l-2 12"/></svg></div>
+              <h3>Web Development</h3>
+              <p>Building clean, functional websites — from landing pages to small business sites.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" style="background:var(--bg-alt);">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag">// experience</span>
+        <h2>Where I've worked</h2>
+      </div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot">02</div>
+          <div class="tl-card">
+            <div class="tl-top"><h3>Technical Support Intern</h3><span class="tl-date">February 2026 - May 2026</span></div>
+            <div class="tl-org">TSU - Office of Management Information Systems · Tarlac City</div>
+            <ul>
+              <li>Created and Managed Active Directory use Accounts, Organizational Unit and Security groups</li>
+              <li>Diagnosed and troubleshot desktop and laptop computer problems.</li>
+              <li>Installed, configured, and maintained computer systems and peripherals.</li>
+              <li>Assisted in troubleshooting and repairing printers, including connectivity and printing issues.</li>
+              <li>Performed basic network troubleshooting, including internet connectivity and network device configuration.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot">01</div>
+          <div class="tl-card">
+            <div class="tl-top"><h3>Capstone Leader (WaterGuard)</h3><span class="tl-date">2025 — 2026</span></div>
+            <div class="tl-org">TSU - College of Computer Studies · Tarlac City</div>
+            <ul>
+              <li>Led the capstone team through the full development lifecycle, culminating in the creation of comprehensive end-user installation guides and technical documentation.</li>
+              <li>Developed a live water quality monitoring system utilizing WebSocket-based communication to deliver instant, continuous data updates to the end-user.</li>
+              <li>Successfully integrated and tested precision sensors to accurately track critical water safety metrics, including pH levels, Total Dissolved Solids (TDS), and turbidity.</li>
+              <li>Engineered a full-stack IoT application utilizing an ESP32 microcontroller and WebSockets to stream real-time sensor data to a Node.js and MongoDB backend, visualized through a dynamic React interface.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="section-head" style="margin-top:70px;">
+          <span class="tag">// projects</span>
+          <h2>Things I've built</h2>
+        </div>
+        <div class="project-carousel">
+          <button class="project-nav project-prev" aria-label="Previous project">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+
+          <div class="project-track" id="projectTrack">
+            <a href="projects/project.html?id=waterguard" class="project-card">
+              <div class="project-thumb">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4.5 8-11.8A8 8 0 0012 2a8 8 0 00-8 8.2C4 17.5 12 22 12 22z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="project-body">
+                <h3>WaterGuard</h3>
+                <p>Real-time IoT water quality monitoring system with a live React dashboard.</p>
+                <div class="project-tags">
+                  <span>ESP32</span><span>Node.js</span><span>MongoDB</span><span>React</span>
+                </div>
+              </div>
+              <span class="project-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </span>
+            </a>
+            <a href="projects/project.html?id=SOHONetwork" class="project-card">
+              <div class="project-thumb">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4.5 8-11.8A8 8 0 0012 2a8 8 0 00-8 8.2C4 17.5 12 22 12 22z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="project-body">
+                <h3>Virtual Small Office Home Office Network</h3>
+                <p>A Virtual Small Office Home Office Network created using VMWare ExSI.</p>
+                <div class="project-tags">
+                  <span>ExSi</span><span>VSphere</span><span>pfSense</span><span>Windows Server 2008 R2</span><span> Windows 11 pro</span>
+                </div>
+              </div>
+              <span class="project-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </span>
+            </a>
+            <!-- duplicate .project-card for each additional project -->
+          </div>
+
+          <button class="project-nav project-next" aria-label="Next project">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+    </div>
+  </section>
+
+<!-- CERTIFICATES -->
+<section id="certificates">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">// certificates</span>
+      <h2>Certifications &amp; training</h2>
+    </div>
+    <div class="cert-carousel">
+  <button class="cert-nav cert-prev" aria-label="Previous certificate">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+
+  <div class="cert-track" id="certTrack">
+    <div class="cert-card">
+      <div class="cert-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15a6 6 0 100-12 6 6 0 000 12z"/><path d="M8.5 13.5L7 22l5-3 5 3-1.5-8.5"/></svg>
+      </div>
+      <div class="cert-body">
+        <h3>Google IT Support</h3>
+        <p class="cert-issuer">Coursera</p>
+        <span class="cert-date">May 2025</span>
+      </div>
+      <a href="asset/certificates/cert1.pdf" target="_blank" rel="noopener" class="cert-link">
+        View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+      </a>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15a6 6 0 100-12 6 6 0 000 12z"/><path d="M8.5 13.5L7 22l5-3 5 3-1.5-8.5"/></svg>
+      </div>
+      <div class="cert-body">
+        <h3>Cybesecurity Essential</h3>
+        <p class="cert-issuer">Cisco Netwoking Academy</p>
+        <span class="cert-date">June 2025</span>
+      </div>
+      <a href="asset/certificates/cert1.pdf" target="_blank" rel="noopener" class="cert-link">
+        View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+      </a>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15a6 6 0 100-12 6 6 0 000 12z"/><path d="M8.5 13.5L7 22l5-3 5 3-1.5-8.5"/></svg>
+      </div>
+      <div class="cert-body">
+        <h3>CCNA: Enterprise Networking Security and Automation</h3>
+        <p class="cert-issuer">Cisco Networking Academy</p>
+        <span class="cert-date">December 2024</span>
+      </div>
+      <a href="asset/certificates/cert1.pdf" target="_blank" rel="noopener" class="cert-link">
+        View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+      </a>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15a6 6 0 100-12 6 6 0 000 12z"/><path d="M8.5 13.5L7 22l5-3 5 3-1.5-8.5"/></svg>
+      </div>
+      <div class="cert-body">
+        <h3>CCNAv7: Switching, Routing, and Wireless Essential</h3>
+        <p class="cert-issuer">Cisco Networking Academy</p>
+        <span class="cert-date">November 2024</span>
+      </div>
+      <a href="asset/certificates/cert1.pdf" target="_blank" rel="noopener" class="cert-link">
+        View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+      </a>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15a6 6 0 100-12 6 6 0 000 12z"/><path d="M8.5 13.5L7 22l5-3 5 3-1.5-8.5"/></svg>
+      </div>
+      <div class="cert-body">
+        <h3>CCNAv7: Introduction to Networks</h3>
+        <p class="cert-issuer">Cisco Networking Academy</p>
+        <span class="cert-date">January 2024</span>
+      </div>
+      <a href="asset/certificates/cert1.pdf" target="_blank" rel="noopener" class="cert-link">
+        View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+      </a>
+    </div>
+    <!-- repeat .cert-card for each certificate you have -->
+  </div>
+
+  <button class="cert-nav cert-next" aria-label="Next certificate">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+  </div>
+  </div>
+</section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact-panel">
+        <div class="contact-left">
+          <span class="tag" style="color:#3CE28C;">// contact</span>
+          <h2>Let's fix, build, or connect something.</h2>
+          <p class="lede2">Open to full-time roles, contract IT support, and web dev projects. Reach out and I'll get back to you within a day.</p>
+        </div>
+        <div class="contact-right">
+          <div class="social-links">
+              <a href="mailto:chowrichardjianfa@gmail.com" class="social-btn" target="_blank" rel="noopener">
+                <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+                <span class="social-text">
+                  <strong>Google</strong>
+                  <small>chowrichardjianfa@gmail.com</small>
+                </span>
+                <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/richard-jian-fa-chow-191aa9352/" class="social-btn" target="_blank" rel="noopener">
+                <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span>
+                <span class="social-text">
+                  <strong>LinkedIn</strong>
+                  <small>Richard Jian Fa Chow</small>
+                </span>
+                <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+              </a>
+              <a href="tel:+639053053305" class="social-btn">
+                <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.6a2 2 0 01-.5 2.1L8 9.6a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.5c.8.3 1.7.5 2.6.6a2 2 0 011.7 2z"/></svg></span>
+                <span class="social-text">
+                  <strong>Phone</strong>
+                  <small>+63 905 305 3305</small>
+                </span>
+                <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+              </a>
             </div>
         </div>
-    </nav>
+      </div>
+    </div>
+  </section>
+</main>
 
-    <!-- Landing -->
-    <header id="hero" class="hero-section">
-        <div class="container text-center text-md-start">
-            <div class="row align-items-center">
-                <div class="col-md-7">
-                    <h1 class="display-3 fw-bold">Hello, I'm <span class="text-custom-green">Richard Jian Fa Y. Chow</span></h1>
-                    <p class="lead mt-3">4th Year Information Technology student at <b><span style="color: #c51d2d;">Tarlac State University</span></b> dedicated to leveraging technology to streamline business processes.</p>
-                    <a href="#projects" class="btn btn-custom btn-lg px-4 mt-3">View My Projects</a>
-                </div>
-                <div class="col-md-5 text-center">
-                    <img src="/assets/Profile.jpg" class="img-fluid rounded-circle shadow-lg border border-5 border-white" alt="Richard Chow">
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- Project Section -->
-    <section id="projects" class="container py-5">
-        <div class="text-center mb-5">
-            <h2 class="fw-bold text-custom-green">Featured Projects</h2>
-            <p class="text-muted">A showcase of my technical projects and academic work.</p>
-        </div>
-        
-        <div class="row g-4">
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 project-card shadow-sm border-0">
-                    <div class="project-img-container">
-                        <img src="/assets/Logo.png" class="card-img-top" alt="Water Quality Monitoring">
-                        <div class="project-overlay">
-                            <a href="#" class="btn btn-light btn-sm fw-bold">View Project</a>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="mb-2">
-                            <span class="badge bg-success-subtle text-success border border-success-subtle">MERN</span>
-                            <span class="badge bg-primary-subtle text-primary border border-primary-subtle">IoT</span>
-                        </div>
-                        <h5 class="card-title fw-bold">IoT Water Quality Monitor</h5>
-                        <p class="card-text small text-muted">Automated system for monitoring water parameters such as pH, Temperature, Turbidy, and Total Dissolved Solids with valve shut-off functionality for our Capstone project</p>
-                    </div>
-                    <div class="card-footer bg-transparent border-0 pb-3">
-                        <a href="https://github.com/Chowzkie/WaterGuard" target="_blank" class="text-decoration-none text-custom-green fw-bold small">
-                            <i class="bi bi-github me-1"></i> GitHub Repository
-                        </a>
-                    </div>
-                </div>
-            </div>
+<footer>
+  <div class="wrap">© <span id="year"></span> CHOWZKI </div>
+</footer>
 
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 project-card shadow-sm border-0">
-                    <div class="project-img-container">
-                        <img src="/assets/favicon.png" class="card-img-top" alt="Portfolio">
-                    </div>
-                    <div class="card-body">
-                        <div class="mb-2">
-                            <span class="badge bg-info-subtle text-info border border-info-subtle">HTML5</span>
-                            <span class="badge bg-success-subtle text-success border border-success-subtle">CSS3</span>
-                            <span class="badge bg-primary-subtle text-primary border border-primary-subtle">Bootstrap</span>
-                        </div>
-                        <h5 class="card-title fw-bold">Personal Portfolio</h5>
-                        <p class="card-text small text-muted">
-                            A responsive professional showcase built with <b>Bootstrap 5</b> and <b>Custom CSS</b>, 
-                            featuring a mobile-first design and integrated <b>Formspree API</b> for seamless 
-                            client communication.
-                        </p>
-                    </div>
-                    <div class="card-footer bg-transparent border-0 pb-3">
-                        <a href="https://github.com/Chowzkie/Portfolio" target="_blank" class="text-decoration-none text-custom-green fw-bold small">
-                            <i class="bi bi-github me-1"></i> GitHub Repository
-                        </a>
-                    </div>
-                </div>
-            </div>
+<script src="script.js"></script>
 
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 project-card shadow-sm border-0">
-                    <div class="project-img-container">
-                        <img src="/assets/TG.png" class="card-img-top" alt="TechGeeks">
-                        <div class="project-overlay">
-                            <a href="#" class="btn btn-light btn-sm fw-bold">View Case Study</a>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="mb-2">
-                            <span class="badge bg-info-subtle text-info border border-info-subtle">HTML5</span>
-                            <span class="badge bg-success-subtle text-success border border-success-subtle">CSS3</span>
-                            <span class="badge bg-primary-subtle text-primary border border-primary-subtle">Javascript</span>
-                        </div>
-                        <h5 class="card-title fw-bold">TechGeeks</h5>
-                        <p class="card-text small text-muted">A case study for Web development course that showcase a different Speaker in a diferent Fields in IT. (The person displayed here is just a Mock sample)</p>
-                    </div>
-                    <div class="card-footer bg-transparent border-0 pb-3">
-                        <a href="https://github.com/Chowzkie/TechGeeks" target="_blank" class="text-decoration-none text-custom-green fw-bold small">
-                            <i class="bi bi-github me-1"></i> GitHub Repository
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Tech stack Section -->
-    <section id="tech-stack" class="py-5" style="background-color: #ffffff;">
-        <div class="container text-center">
-            <h2 class="fw-bold text-custom-green mb-5">My Tech Stack</h2>
-            
-            <div id="techCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row justify-content-center g-4">
-                            <div class="col-4 col-md-2 tech-icon-box">
-                                <img src="/img/HTML.png" style="width: 50px; height: 50px;"  alt="HTML5">
-                                <p class="small fw-bold mt-2">HTML5</p>
-                            </div>
-                            <div class="col-4 col-md-2 tech-icon-box">
-                                <img src="/img/CSS.png" style="width: 50px; height: 50px;" alt="CSS3">>
-                                <p class="small fw-bold mt-2">CSS3</p>
-                            </div>
-                            <div class="col-4 col-md-2 tech-icon-box">  
-                                <img src="/img/BOOTSTRAP.png" style="width: 50px; height: 50px;" alt="Bootstrap">
-                                <p class="small fw-bold mt-2">Bootstrap</p>
-                            </div>
-                            <div class="col-4 col-md-2 tech-icon-box">
-                                <img src="/img/JS.png" style="width: 50px; height: 50px;" alt="Javascript">
-                                <p class="small fw-bold mt-2">JavaScript</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="row justify-content-center g-4">
-                            <div class="col-4 col-md-2 tech-icon-box">
-                                <img src="/img/mongodb.png" style="width: 50px; height: 50px;" alt="Mongo">
-                                <p class="small fw-bold mt-2">MongoDB</p>
-                            </div>
-                            <div class="col-4 col-md-2 tech-icon-box">
-                                <img src="/img/express-js.png" style="width: 50px; height: 50px;" alt="Express">
-                                <p class="small fw-bold mt-2">Express.js</p>
-                            </div>
-                            <div class="col-4 col-md-2 tech-icon-box">
-                                <img src="/img/REACT.png" style="width: 50px; height: 50px;" alt="React">
-                                <p class="small fw-bold mt-2">React.js</p>
-                            </div>
-                            <div class="col-4 col-md-2 tech-icon-box">
-                                <img src="/img/NODE.png" style="width: 50px; height: 50px;" alt="Node">
-                                <p class="small fw-bold mt-2">Node.js</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="row justify-content-center g-4">
-                            <div class="col-4 col-md-2 tech-icon-box">
-                                <img src="/img/GIT.png" style="width: 50px; height: 50px;" alt="Git">
-                                <p class="small fw-bold mt-2">Git</p>
-                            </div>
-                            <div class="col-4 col-md-2 tech-icon-box">
-                                <img src="/img/GITHUB.png" style="width: 50px; height: 50px;" alt="GitHub">
-                                <p class="small fw-bold mt-2">GitHub</p>
-                            </div>
-                            <div class="col-4 col-md-2 tech-icon-box">
-                                <img src="/img/terminal.png" style="width: 50px; height: 50px;" alt="Terminal">
-                                <p class="small fw-bold mt-2">Terminal</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <button class="carousel-control-prev" type="button" data-bs-target="#techCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#techCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </div>
-    </section>
-    <!-- Experience and Edu -->
-    <section id="edu" class="py-5" style="background-color: var(--bg-light-mint);">
-        <div class="container">
-            <h2 class="fw-bold text-custom-green text-center mb-5">Education & Experience</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="timeline">
-                        <div class="timeline-item mb-5 ps-4 border-start border-3 border-success position-relative">
-                            <div class="timeline-dot"></div>
-                            <span class="badge btn-custom mb-2">2020 - 2022</span>
-                            <h4 class="fw-bold">TVL - ICT (Information and Communication Technology)</h4>
-                            <h6 class="text-custom-green fw-bold">Moncada National Highschool</h6>
-                            <p class="text-muted">Graduated as With Honor</p>
-                        </div>
-                        <div class="timeline-item mb-5 ps-4 border-start border-3 border-success position-relative">
-                            <div class="timeline-dot"></div>
-                            <span class="badge btn-custom mb-2">2022 - Present</span>
-                            <h4 class="fw-bold">Bachelor of Science in Information Technology</h4>
-                            <h6 class="text-custom-green fw-bold">Tarlac State University</h6>
-                            <p class="text-muted">Currently in 4th year, Specialized in Networking and Administration.</p>
-                        </div>
-
-                        <div class="timeline-item mb-5 ps-4 border-start border-3 border-success position-relative">
-                            <div class="timeline-dot"></div>
-                            <span class="badge btn-custom mb-2">2025 - 2026</span>
-                            <h4 class="fw-bold">IT Student Intern / Academic Projects</h4>
-                            <h6 class="text-custom-green fw-bold">Capstone Project</h6>
-                            <p class="text-muted">Developed a IoT-Based Water Quality Monitoring system with automated valve shut-off using MERN (MongoDB, Express.js, React.js, Node.js)</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Contact -->
-    <section id="contact" class="container py-5">
-        <div class="contact-wrapper shadow-lg rounded-4 overflow-hidden">
-            <div class="row g-0">
-                <div class="col-md-5 contact-info-panel text-white p-5 d-flex flex-column justify-content-center">
-                    <h2 class="fw-bold mb-4">Let's Connect</h2>
-                    <p class="mb-5 opacity-75">I'm currently seeking internship opportunities. Reach out if you want to discuss a project or just say hi!</p>
-                    
-                    <div class="contact-item d-flex align-items-center mb-4">
-                        <div class="icon-box me-3"><i class="bi bi-envelope-fill"></i></div>
-                        <span>chowrichardjianfa@gmail.com</span>
-                    </div>
-                    
-                    <div class="contact-item d-flex align-items-center mb-4">
-                        <div class="icon-box me-3"><i class="bi bi-geo-alt-fill"></i></div>
-                        <span>Moncada Tarlac, Philippines</span>
-                    </div>
-
-                    <div class="social-links mt-4">
-                        <a href="https://www.linkedin.com/in/richard-jian-fa-chow-191aa9352/" class="text-white me-3 fs-4" target="_blank"><i class="bi bi-linkedin"></i></a>
-                        <a href="https://github.com/Chowzkie" class="text-white me-3 fs-4" target="_blank"><i class="bi bi-github"></i></a>
-                        <a href="https://www.facebook.com/richard.chow.92808" class="text-white fs-4" target="_blank"><i class="bi bi-facebook"></i></a>
-                    </div>
-                </div>
-
-                <div class="col-md-7 bg-white p-5">
-                    <h3 class="fw-bold text-custom-green mb-4">Send a Message</h3>
-                    <form id="contactForm" action="https://formspree.io/f/mjgknkgr" method="POST">
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label small fw-bold">NAME</label>
-                                <input type="text" name="name" class="form-control custom-input" placeholder="Your Name" required>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label small fw-bold">EMAIL</label>
-                                <input type="email" name="email" class="form-control custom-input" placeholder="email@example.com" required>
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label small fw-bold">MESSAGE</label>
-                            <textarea name="message" class="form-control custom-input" rows="5" placeholder="How can I help you?" required></textarea>
-                        </div>
-                        <button type="submit" id="submitBtn" class="btn btn-custom w-100 py-3 mt-2 shadow-sm">
-                            SEND MESSAGE <i class="bi bi-send-fill ms-2"></i>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer id="contact" class="bg-dark text-white text-center py-4">
-        <p class="mb-0">© 2026 Richard Jian Fa Y. Chow | Built with Bootstrap</p>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>

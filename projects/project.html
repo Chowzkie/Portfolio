@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="pageTitle">Project — Overview</title>
+<link rel="icon" type="image/x-icon" href="../asset/favicon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="project.css">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <div class="logo"><img src="../asset/favicon.svg" alt="RC logo" class="logo-mark"></div>
+    <ul class="navlinks">
+      <li><a href="../index.html#home">Home</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#experience">Experience</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="mainContent">
+  <!-- content is injected here by script.js based on ?id= in the URL -->
+</main>
+
+<footer>
+  <div class="wrap">© <span id="year"></span> CHOWZKI.</div>
+</footer>
+
+<script src="projects-data.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get('id');
+  const project = projectsData[id];
+  const main = document.getElementById('mainContent');
+
+  if(!project){
+    main.innerHTML = `
+      <section class="not-found">
+        <div class="wrap">
+          <h1>Project not found</h1>
+          <p>The project you're looking for doesn't exist or the link is missing an id.</p>
+          <a href="../index.html#experience" class="btn btn-primary">Back to Experience</a>
+        </div>
+      </section>
+    `;
+  } else {
+    document.getElementById('pageTitle').textContent = project.title + ' — Project Overview';
+
+    const tagsHtml = project.tags.map(t => `<span>${t}</span>`).join('');
+    const featuresHtml = project.features.map(f => `<li>${f}</li>`).join('');
+    const slidesHtml = project.images.map(src => `<div class="img-slide"><img src="${src}" alt="${project.title} screenshot"></div>`).join('');
+    const linksHtml = (project.links && project.links.length)
+    ? project.links.map(l => `<a href="${l.url}" class="btn ${l.style}" target="_blank" rel="noopener">${l.label}</a>`).join('')
+    : '';
+
+    main.innerHTML = `
+      <section class="proj-hero">
+        <div class="wrap">
+          <a href="../index.html#experience" class="back-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+            Back
+          </a>
+          <h1>${project.title}</h1>
+          <p class="proj-sub">${project.subtitle}</p>
+          <div class="proj-meta">${tagsHtml}</div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          ${project.images.length ? `
+          <div class="img-carousel">
+            <button class="img-nav img-prev" aria-label="Previous image">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <div class="img-track" id="imgTrack">${slidesHtml}</div>
+            <button class="img-nav img-next" aria-label="Next image">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>` : ''}
+
+          <div class="proj-section">
+            <h2>Overview</h2>
+            <p>${project.overview}</p>
+          </div>
+
+          <div class="proj-section">
+            <h2>What it does</h2>
+            <ul>${featuresHtml}</ul>
+          </div>
+
+          <div class="proj-section">
+            <h2>My role</h2>
+            <p>${project.role}</p>
+          </div>
+
+            ${(project.links && project.links.length) ? `
+            <div class="proj-section">
+            <h2>Links</h2>
+            <div class="proj-links">${linksHtml}</div>
+            </div>` : ''}
+        </div>
+      </section>
+    `;
+        // wire up the image carousel now that it's in the DOM
+        const imgTrack = document.getElementById('imgTrack');
+        const imgPrev = document.querySelector('.img-prev');
+        const imgNext = document.querySelector('.img-next');
+        if(imgTrack && imgPrev && imgNext){
+        const imgScrollAmount = () => imgTrack.querySelector('.img-slide').offsetWidth + 16;
+        imgPrev.addEventListener('click', () => imgTrack.scrollBy({left: -imgScrollAmount(), behavior:'smooth'}));
+        imgNext.addEventListener('click', () => imgTrack.scrollBy({left: imgScrollAmount(), behavior:'smooth'}));
+
+        // hide both nav buttons if there's only 1 image (nothing to scroll to)
+        if(project.images.length <= 1){
+            imgPrev.style.display = 'none';
+            imgNext.style.display = 'none';
+        }
+        }
+  }
+</script>
+
+</body>
+</html>
