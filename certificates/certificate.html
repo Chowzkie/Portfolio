@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="pageTitle">Certificate — Overview</title>
+<link rel="icon" type="image/x-icon" href="../asset/favicon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="certificate.css">
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <div class="logo"><img src="../asset/favicon.svg" alt="RC logo" class="logo-mark"></div>
+    <ul class="navlinks">
+      <li><a href="../index.html#home">Home</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#experience">Experience</a></li>
+      <li><a href="../index.html#certificates">Certificates</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="mainContent">
+  <!-- content is injected here by the script below, based on ?id= in the URL -->
+</main>
+
+<footer>
+  <div class="wrap">© <span id="year"></span> Richard Chow.</div>
+</footer>
+
+<script src="certificates-data.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get('id');
+  const cert = certificatesData[id];
+  const main = document.getElementById('mainContent');
+
+  if(!cert){
+    main.innerHTML = `
+      <section class="not-found">
+        <div class="wrap">
+          <h1>Certificate not found</h1>
+          <p>The certificate you're looking for doesn't exist or the link is missing an id.</p>
+          <a href="../index.html#certificates" class="btn btn-primary">Back to Certificates</a>
+        </div>
+      </section>
+    `;
+  } else {
+    document.getElementById('pageTitle').textContent = cert.title + ' — Certificate';
+
+    const credentialHtml = cert.credentialId
+      ? `<div class="cert-section"><h2>Credential ID</h2><span class="credential-id">${cert.credentialId}</span></div>`
+      : '';
+
+    const verifyLinkHtml = cert.credentialUrl
+      ? `<a href="${cert.credentialUrl}" class="btn btn-primary" target="_blank" rel="noopener">Verify Certificate</a>`
+      : '';
+
+    main.innerHTML = `
+      <section class="cert-hero">
+        <div class="wrap">
+          <a href="../index.html#certificates" class="back-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+            Back to certificates
+          </a>
+          <h1>${cert.title}</h1>
+          <p class="cert-issuer">${cert.issuer}</p>
+          <span class="cert-date-badge">${cert.date}</span>
+        </div>
+      </section>
+
+      <section class="cert-content">
+        <div class="wrap">
+          <div class="cert-image-wrap">
+            <img src="${cert.image}" alt="${cert.title} certificate">
+          </div>
+
+          ${cert.description ? `
+          <div class="cert-section">
+            <h2>About this certificate</h2>
+            <p>${cert.description}</p>
+          </div>` : ''}
+
+          ${credentialHtml}
+
+          ${verifyLinkHtml ? `
+          <div class="cert-section">
+            <div class="cert-links">${verifyLinkHtml}</div>
+          </div>` : ''}
+        </div>
+      </section>
+    `;
+  }
+</script>
+
+</body>
+</html>
